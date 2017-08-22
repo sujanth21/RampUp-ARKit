@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,12 +24,25 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NpF-dp-yws">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bI-kT-7vq">
+                                <rect key="frame" x="262" y="586" width="107" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="8Gb-Y1-lCv"/>
+                                    <constraint firstAttribute="width" constant="107" id="dbq-Vr-5Ti"/>
+                                </constraints>
+                                <state key="normal" image="rampIcon"/>
+                                <connections>
+                                    <action selector="rampBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="29J-Gu-vrv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NpF-dp-yws" firstAttribute="leading" secondItem="WIf-l6-5oY" secondAttribute="leading" id="8nS-x4-UDB"/>
                             <constraint firstItem="NpF-dp-yws" firstAttribute="top" secondItem="WIf-l6-5oY" secondAttribute="top" id="Ki8-6B-bfd"/>
                             <constraint firstAttribute="bottom" secondItem="NpF-dp-yws" secondAttribute="bottom" id="ogX-hU-Xow"/>
+                            <constraint firstItem="6bI-kT-7vq" firstAttribute="trailing" secondItem="WIf-l6-5oY" secondAttribute="trailingMargin" constant="10" id="uUj-4x-YOU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6bI-kT-7vq" secondAttribute="bottom" constant="10" id="yYj-GJ-mYM"/>
                             <constraint firstAttribute="trailing" secondItem="NpF-dp-yws" secondAttribute="trailing" id="zII-nY-Iad"/>
                         </constraints>
                     </view>
@@ -41,4 +55,7 @@
             <point key="canvasLocation" x="-82.400000000000006" y="114.69265367316342"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rampIcon" width="107" height="71"/>
+    </resources>
 </document>
