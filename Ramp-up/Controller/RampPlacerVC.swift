@@ -18,11 +18,9 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
 
         sceneView.delegate = self
-        
         sceneView.showsStatistics  = true
         
         let scene = SCNScene(named: "")!
-        
         sceneView.scene = scene
     }
 
@@ -30,7 +28,6 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         
         let configuration = ARWorldTrackingSessionConfiguration()
-        
         sceneView.session.run(configuration)
     }
     
