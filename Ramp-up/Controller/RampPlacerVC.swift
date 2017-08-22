@@ -20,7 +20,7 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         sceneView.showsStatistics  = true
         
-        let scene = SCNScene(named: "")!
+        let scene = SCNScene(named: "art.scnassets/pipe.dae")!
         sceneView.scene = scene
     }
 
