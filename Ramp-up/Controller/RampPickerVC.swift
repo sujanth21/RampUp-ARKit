@@ -50,7 +50,13 @@ class RampPickerVC: UIViewController {
         obj = SCNScene(named: "art.scnassets/pyramid.dae")
         node = obj?.rootNode.childNode(withName: "pyramid", recursively: true)!
         node?.scale = SCNVector3Make(0.0058, 0.0058, 0.0058)
-        node?.position = SCNVector3Make(-1, -0.65, -1)
+        node?.position = SCNVector3Make(-1, -0.50, -1)
+        scene.rootNode.addChildNode(node!)
+        
+        obj = SCNScene(named: "art.scnassets/quarter.dae")
+        node = obj?.rootNode.childNode(withName: "quarter", recursively: true)
+        node?.scale = SCNVector3Make(0.0058, 0.0058, 0.0058)
+        node?.position = SCNVector3Make(-1, -2.4, -1)
         scene.rootNode.addChildNode(node!)
         
         
